@@ -21,4 +21,16 @@ class CapturesMetricTest extends TestCase
         // assert
         self::assertSame($expectedResult, $actualResult);
     }
+
+    public function testGetName(): void
+    {
+        // arrange
+        $metric = new CapturesMetric(new \FenParser0x88());
+
+        // act
+        $actualResult = $metric->getName();
+
+        // assert
+        self::assertSame('captures', $actualResult);
+    }
 }

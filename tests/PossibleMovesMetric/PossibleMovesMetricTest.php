@@ -22,4 +22,16 @@ class PossibleMovesMetricTest extends TestCase
         // assert
         self::assertSame($expectedResult, $actualResult);
     }
+
+    public function testGetName(): void
+    {
+        // arrange
+        $metric = new PossibleMovesMetric(new \FenParser0x88(), new CurrentMovesExtractor());
+
+        // act
+        $actualResult = $metric->getName();
+
+        // assert
+        self::assertSame('possibleMoves', $actualResult);
+    }
 }

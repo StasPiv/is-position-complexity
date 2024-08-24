@@ -21,4 +21,16 @@ class PiecesMetricTest extends TestCase
         // assert
         self::assertSame($expectedResult, $actualResult);
     }
+
+    public function testGetName(): void
+    {
+        // arrange
+        $metric = new PiecesMetric(new \FenParser0x88());
+
+        // act
+        $actualResult = $metric->getName();
+
+        // assert
+        self::assertSame('pieces', $actualResult);
+    }
 }
